@@ -2,3 +2,47 @@
 >날짜와 시간 데이터
 >결제금액에 천단위 마다 , 넣기
 >디지털 시계 만들기
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털시계 만들기</title>
+<style>
+    #t1{
+        width:250px;
+        background:rgb(159, 253, 159);
+        text-align:center;
+        border-radius:10%;
+        display:inline-block;
+    }
+</style>
+<script>
+    var inter = 1000;
+
+    function changeObj() {
+        var obj = document.getElementById('t1');
+        var d = new Date();
+        var h = d.getHours(); //현재 시스템의 시간을 얻어옴
+        var m = d.getMinutes(); //현재 시스템의 분을 얻어옴
+        var s = d.getSeconds(); //현재 시스템의 초를 얻어옴
+
+        if (h < 12) txt ='AM';
+        else txt = 'PM';
+        obj.innerHTML = txt+ " "+h+":"+m+":"+s
+    }
+    setInterval(changeObj,inter)
+</script>
+</head>
+<body>
+    <h2>디지털 시계</h2>
+    <h1 id="t1"></h1>
+</body>
+</html>
+
+=======웹문서에 부트스트랩을 적용하고자 할 때 아래 소스 활용=======
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

@@ -15,11 +15,13 @@
     }
 </style>
 <script>
-    var inter = 1000;
-
+    
     function changeObj() {
         var obj = document.getElementById('t1');
+        var currenTime = new Date();
+        obj.innerHTML = currenTime.toLocaleTimeString("ko-KR");
     }
+    setInterval(changeObj,1000)
 </script>
 </head>
 <body>
