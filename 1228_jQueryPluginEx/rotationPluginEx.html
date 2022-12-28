@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery 플러그인 - rotator 적용 예제</title>
-    <style>
-        img {width:150px; height:200px; }
-        .divHeight{float:left;}
-        #movieselect{clear:both;}
-    </style>
+     <!-- 웹 문서에 jQuery를 적용하려면 아래 소스를 추가시킨다.!! -->
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+     <style>img {width:150px; height:200px; }
+             .divHeight {float:left; } 
+             #movieselect {clear:both; }</style>
+     <!-- jQuery 인클루드-->
+     <script src="js/jquery.js"></script>
+     <!-- jQuery 플러그인 인클루드-->
+     <script src="js/jquery.rotator.js"></script>
+     <script>
+         $(document).ready(function() {
+             $('#rotator1').rotator({ms:1000});
+         });
+     </script>
+ 
+
 </head>
 <body>
     <h2>CGV 현재상영작</h2>
