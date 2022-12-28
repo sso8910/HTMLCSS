@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 플러그인 - rotator 적용 예제</title>
+    <style>
+        img {width:150px; height:200px; }
+        .divHeight{float:left;}
+        #movieselect{clear:both;}
+    </style>
+</head>
+<body>
+    <h2>CGV 현재상영작</h2>
+    <div id="rotator1">
+        <div class="divHeight">
+            <img src="images/아바타.jpg" hspace="20">
+            <br><center><b>아바타</b></center>
+        </div>
+
+        <div class="divHeight">
+            <img src="images/영웅.jpg" hspace="20">
+            <br><center><b>영웅</b></center>
+        </div>
+
+        <div class="divHeight">
+            <img src="images/고양이.jpg" hspace="20">
+            <br><center><b>고양이</b></center>
+        </div>
+
+        <div class="divHeight">
+            <img src="images/젠틀맨.jpg" hspace="20">
+            <br><center><b>젠틀맨</b></center>
+        </div>
+    </div>
+    <br><br>
+    <div id="movieselect">
+        <b>영화선택</b>
+        <select name="movie">
+            <option selected>영화선택</option>
+            <option value="아바타">아바타</option>
+            <option value="영웅">영웅</option>
+            <option value="고양이">고양이</option>
+            <option value="젠틀맨">젠틀맨</option>
+        </select>
+    </div>
+</body>
+</html>
