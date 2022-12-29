@@ -1,0 +1,14 @@
+<button type="button" class="btn btn-Primary">Primary</button>
+class="btn btn-Primary" 기본클래스 개별클래스
+
+기본클래스->버튼의 기본 스타일을 지정
+개별클래스->버튼의 모양 지정
+
+btn-Primary->중요한 버튼
+btn-Success->긍정적 의미 버튼
+btn-info->정보 제공 버튼
+btn-Warning->주의 버튼
+btn-danger->위험을 나타내는 버튼
+
+각종 아이이콘 제공 사이트
+http://bootstrapk.com/components/
