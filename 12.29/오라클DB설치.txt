@@ -1,0 +1,49 @@
+관리자 계정 암호 : system / system
+<계정생성, 롤 권한 부여>
+SQL> conn/ as sysdba
+SQL> create user testdb identified by testdb1234;
+SQL> grant connect, resource to testdba;
+
+오라클 데이터베이스에 접속
+SQL> conn testdb/testdb1234
+연결되었습니다.
+
+아펙스(APEX)란?
+=>Application Express의 약자로, Oracle XE에서는 기본적으로 Apex를 제공한다.
+웹으로 DB를 컨트롤 하라 수 있는 웹 애플리케이션을 말한다.
+
+**아펙스의 포트번호 변경하기
+SQL> conn/as sysdba
+SQL> exec dbms_xdb.setHTTPPort(9000);
+
+웹 브라우저 띄운 후 
+http://localhost:9000/apex
+
+----sql눌러서 table 만들기----
+creat table member(
+mem_id varchar2(20) not null primary key,
+mem_passwd varchar2(20) not null,
+mem_name varchar2(20) not null,
+mem_nickname varchar2(20),
+mem_email varchar2(30) not null,
+mem_num1 char(6) not null,
+mem_num2 char(7) not null,
+mem_phone char(13) not null,
+mem_gender varchar2(20) not null,
+mem_birthday1 number(4) not null,
+mem_birthday2 number(2) not null,
+mem_birthday3 number(2) not null,
+mem_job varchar2(30)not null,
+zipcode char(5) not null,
+useraddr1 varchar2(100) not null,
+useraddr2 varchar2(100),
+useraddr3 varchar2(100) not null,
+);
+
+---- table 생성 후 data 입력----
+회원가입 폼에서 id 중복 확인 처리를 테스트하기 위해서 한건의 데이터를 입력하자
+insert into member values('test','1234','김종호','하람','kim77@naver.com','961024','1027123','010-4621-7651','남성',1996,10,24,'프로그래머','06620',
+'서울 서초구 강남대로','1003동 108호','서초동,서초현대타워아파트');
+
+--- data 잘 입력되었는지 확인----
+select * from member;
